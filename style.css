@@ -1,3 +1,4 @@
+/* Global CSS */
 * {
   padding: 0;
   margin: 0;
@@ -7,8 +8,8 @@
 @font-face {
   font-family: OutFit;
   src: url(https://fonts.google.com/specimen/Outfit);
+  font-weight: 400, 700;
 }
-
 
 :root {
   --white: hsl(0, 0%, 100%);
@@ -17,19 +18,86 @@
   --dark-blue: hsl(218, 44%, 22%);
 }
 
-.attribution {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30vw;
-  height: 70vh;
-  margin: 13.5vh 34vw 13.5vh 34vw;
-  border: 1px solid black;
+body {
+  background-color: var(--light-gray);
 }
 
-.attribution > img {
-  width: 10vw;
-  height: 20vh;
-  border-radius: 10%;
+
+/* Desktop CSS */
+@media screen and (min-width: 500px){
+  .attribution {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 60vh;
+    margin: 14.5vh 40vw 14.5vh 40vw;
+    border-radius: 7.5%;
+  }
+  
+  .attribution > img {
+    width: 18vw;
+    height: 36vh;
+    border-radius: 5%;
+    padding: 0.1vh 0.1vw;
+  }
+  
+  p {
+    font-size: 15px;
+    padding: 2vh;
+  }
+
+  .lighter{
+    font-weight: 400;
+  }
+  
+  .darker{
+    font-weight: 700;
+  }
+  
+  footer > a {
+    text-decoration: none;
+    color: var(--dark-blue);
+  }
+
+  footer > a:hover {
+    text-decoration: none;
+    color: var(--grayish-blue);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0vh 35vw 2.5vh 41.5vw;
+  }
+}
+
+/* Mobile CSS */
+@media screen and (max-width: 500px) {
+  .attribution {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 70vh;
+    margin: 13.5vh 34vw 13.5vh 34vw;
+    border: 1px solid var(--light-gray);
+    border-radius: 10%;
+  }
+  
+  .attribution > img {
+    width: 25vw;
+    height: 45vh;
+    border-radius: 5%;
+    padding: 0.5vh 0.5vw;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
 }
