@@ -20,6 +20,13 @@
 
 body {
   background-color: var(--light-gray);
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  background-color: var(--light-gray);
+  padding: 20px;
 }
 
 
@@ -31,22 +38,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 60vh;
+    width: 90%;
+    max-width: 320px;
+    min-width: 250px;
+    height: auto;
     border-radius: 7.5%;
     margin: 5% 40%;
   }
   
   .attribution > img {
-    width: 18vw;
-    height: 36vh;
-    border-radius: 5%;
-    padding: 0.1vh 0.1vw;
+  width: 100%;   
+  height: auto;   
+  display: block;
   }
   
   p {
     font-size: 15px;
-    padding: 2vh;
+    padding: 10px 0; 
+    line-height: 1.4; 
   }
 
   .lighter{
@@ -61,6 +70,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    gap: 2px;
   }
   
   footer > a {
@@ -75,30 +85,34 @@ body {
 }
 
 /* Mobile CSS */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (min-width: 200px) {
   .attribution {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30vw;
-    height: 70vh;
-    margin: 13.5vh 34vw 13.5vh 34vw;
+    width: 85vw;
+    height: auto;
+    margin: 20px auto;
     border: 1px solid var(--light-gray);
-    border-radius: 10%;
+    border-radius: 20px;
   }
   
   .attribution > img {
-    width: 25vw;
-    height: 45vh;
-    border-radius: 5%;
-    padding: 0.5vh 0.5vw;
+    width: 100%;   
+    height: auto;   
+    display: block;
   }
 
   footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    gap: 1px;
+    flex-wrap: wrap; 
+    text-align: center; 
+    padding: 0 20px; 
+    font-size: 13px;
   }
 }
